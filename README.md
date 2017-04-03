@@ -3,8 +3,8 @@ This projects were for the Subject Design &amp; Testing of Software Engineering.
 
 They was developed by the Team DP-Acme-291094.
 The components of the Team are:
-	- Manuel Antonio Gómez Angulo
-	- Alejandro Chaves Medina
-	- Francisco José Domínguez Mena
-	- Jesús Luna Monchul
-	- Na Chen
+  *Manuel Antonio Gómez Angulo
+  *Alejandro Chaves Medina
+  *Francisco José Domínguez Mena
+  *Jesús Luna Monchul
+  *Na Chen
