@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * converters.xml
+ *
+ * Copyright (C) 2016 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd		
+	">
+
+	<util:list id="converters">
+		<bean class="converters.CurriculumToStringConverter" />
+		<bean class="converters.StringToCurriculumConverter" />
+		<bean class="converters.NutritionistToStringConverter" />
+		<bean class="converters.StringToNutritionistConverter" />
+		<bean class="converters.EndorserToStringConverter" />
+		<bean class="converters.StringToEndorserConverter" />
+		
+		<bean class="converters.StringToIngredientConverter" />
+		<bean class="converters.StringToValuedConverter" />
+		<bean class="converters.StringToQuantifiedConverter" />
+		<bean class="converters.StringToRecipeConverter" />
+		
+		<bean class="converters.IngredientToStringConverter" />
+		<bean class="converters.ValuedToStringConverter" />
+		<bean class="converters.QuantifiedToStringConverter" />
+		<bean class="converters.RecipeToStringConverter" />
+		
+		<bean class="converters.StringToUserConverter" /> 
+		<bean class="converters.UserToStringConverter" />
+		<bean class="converters.StringToActorConverter" /> 
+		<bean class="converters.ActorToStringConverter" />  
+		<bean class="converters.StringToCustomerConverter" /> 
+		<bean class="converters.CustomerToStringConverter" /> 
+		<bean class="converters.StringToAuthorityConverter" /> 
+		<bean class="converters.AuthorityToStringConverter" /> 
+		<bean class="converters.StringToFolderConverter" /> 
+		<bean class="converters.FolderToStringConverter" /> 
+		<bean class="converters.StringToCommentConverter" /> 
+		<bean class="converters.CommentToStringConverter" /> 
+		<bean class="converters.StringToSocialIdentityConverter" /> 
+		<bean class="converters.SocialIdentityToStringConverter" /> 
+		<bean class="converters.StringToMasterClassConverter" /> 
+		<bean class="converters.MasterClassToStringConverter" /> 
+		<bean class="converters.StringToCreditCardConverter" /> 
+		<bean class="converters.CreditCardToStringConverter" /> 
+		<bean class="converters.StringToCampaignConverter" /> 
+		<bean class="converters.CampaignToStringConverter" /> 
+		<bean class="converters.StringToBillConverter" /> 
+		<bean class="converters.BillToStringConverter" /> 
+		<bean class="converters.StringToUserAccountConverter" /> 
+		<bean class="converters.UserAccountToStringConverter" />
+		
+		<bean class="converters.StringToCategoryConverter" />
+		<bean class="converters.StringToContestConverter" />
+		<bean class="converters.CategoryToStringConverter" />
+		<bean class="converters.ContestToStringConverter" />
+		
+		<bean class="converters.StringToStepConverter" />
+		<bean class="converters.StepToStringConverter" />
+		
+		<bean class="converters.StringToSponsorConverter" />
+		<bean class="converters.SponsorToStringConverter" />
+		
+		<bean class="converters.CookToStringConverter" />
+		<bean class="converters.StringToCookConverter" />
+		<bean class="converters.LearningMaterialToStringConverter" />
+		<bean class="converters.StringToLearningMaterialConverter" />
+		
+		<bean class="converters.StringToMessageConverter" />
+		<bean class="converters.MessageToStringConverter" />
+		<bean class="converters.StringToPropertyConverter" />
+		<bean class="converters.PropertyToStringConverter" />
+		<bean class="converters.StringToFeeConverter" />
+		<bean class="converters.FeeToStringConverter" />
+		<bean class="converters.StringToPresentationConverter" /> 
+  		<bean class="converters.PresentationToStringConverter" /> 
+	  	<bean class="converters.StringToVideoConverter" /> 
+	  	<bean class="converters.VideoToStringConverter" /> 
+	  	<bean class="converters.StringToTextConverter" /> 
+	  	<bean class="converters.TextToStringConverter" /> 
+			
+	</util:list>
+	
+</beans>

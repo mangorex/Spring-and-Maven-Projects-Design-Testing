@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2016 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+	
+
+	<definition name="user/register" extends="master.page">	
+		<put-attribute name="title" value="Registrar un usuario" />
+		<put-attribute name="body" value="/views/user/register.jsp" />
+	</definition>
+	
+	<definition name="user/edit" extends="master.page">	
+		<put-attribute name="title" value="Datos personales" />
+		<put-attribute name="body" value="/views/user/edit.jsp" />
+	</definition>
+	
+	<definition name="user/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de usuarios" />
+		<put-attribute name="body" value="/views/user/list.jsp" />
+	</definition>
+	
+	<definition name="user/search" extends="master.page">
+		<put-attribute name="title" value="Buscar usuarios" />
+		<put-attribute name="body" value="/views/user/search.jsp" />
+	</definition>
+
+</tiles-definitions>

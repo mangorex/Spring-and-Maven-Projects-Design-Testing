@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2014 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="recipe/browse" extends="master.page">	
+		<put-attribute name="title" value="Ojear recetas" />
+		<put-attribute name="body" value="/views/recipe/browse.jsp" />
+	</definition>
+	
+	<definition name="recipe/search" extends="master.page">	
+		<put-attribute name="title" value="Búsqueda de Recetas" />
+		<put-attribute name="body" value="/views/recipe/search.jsp" />
+	</definition>
+
+	<definition name="recipe/edit" extends="master.page">	
+		<put-attribute name="title" value="Edición de Recetas" />
+		<put-attribute name="body" value="/views/recipe/edit.jsp" />
+	</definition>
+	
+	<definition name="recipe/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de Recetas" />
+		<put-attribute name="body" value="/views/recipe/list.jsp" />
+	</definition>
+	
+	<definition name="recipe/view" extends="master.page">	
+		<put-attribute name="title" value="Ver una receta" />
+		<put-attribute name="body" value="/views/recipe/view.jsp" />
+	</definition>
+	
+	<definition name="recipe/latest" extends="master.page">	
+		<put-attribute name="title" value="Ultimas recetas de los seguidores" />
+		<put-attribute name="body" value="/views/recipe/latest.jsp" />
+	</definition>
+	
+	<definition name="recipe/qualify" extends="master.page">	
+		<put-attribute name="title" value="Calificar una receta" />
+		<put-attribute name="body" value="/views/recipe/qualify.jsp" />
+	</definition>
+	
+	<definition name="recipe/listPublic" extends="master.page">	
+		<put-attribute name="title" value="Lista de recetas del usuario" />
+		<put-attribute name="body" value="/views/recipe/listPublic.jsp" />
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+
+ * Copyright (C) 2016 Universidad de Sevilla
+ * Author (A) 2012 Rafael Corchuelo (corchu@us.es)
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="endorser/list" extends="master.page">	
+		<put-attribute name="title" value="Endorser List" />
+		<put-attribute name="body" value="/views/endorser/list.jsp" />
+	</definition>
+	
+	<definition name="endorser/edit" extends="master.page">
+		<put-attribute name="title" value="Edit endorser" />
+		<put-attribute name="body" value="/views/endorser/edit.jsp" />
+	</definition>
+
+</tiles-definitions>

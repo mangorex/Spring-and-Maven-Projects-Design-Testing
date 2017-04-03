@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2016 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin1" />
+		<property name="password" value="e00cf25ad42683b3df678c61f42c6bda" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="userAccount" ref="userAccount1" />
+		<property name="name" value="Fernando" />
+		<property name="surname" value="Gutierrez" />
+		<property name="emailAddress" value="administrator1@emailAddress.com" />
+		<property name="phoneNumber" value="+34 655766889" />
+		<property name="postalAddress" value="41012" />
+
+		<property name="folders">
+			<list>
+				<ref bean="folder1ad"></ref>
+				<ref bean="folder2ad"></ref>
+				<ref bean="folder3ad"></ref>
+				<ref bean="folder4ad"></ref>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+
+		<property name="cooks">
+			<list>
+			</list>
+		</property>
+
+		<property name="promotedMasterClasses">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder1ad" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder2ad" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder3ad" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1">
+		</property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder4ad" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="fee" class="domain.Fee">
+		<property name="costPerBanner" value="0.25" />
+	</bean>
+	
+	<bean id="Spam" class="domain.Spam">
+		<property name="spamWords" value="viagra,cialis,sex,love" />
+	</bean>
+</beans>

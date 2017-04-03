@@ -1,0 +1,4417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2016 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin1" />
+		<property name="password" value="e00cf25ad42683b3df678c61f42c6bda" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2Ad" class="security.UserAccount">
+		<property name="username" value="admin2" />
+		<property name="password" value="c84258e9c39059a89ab77d846ddab909" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount3Ad" class="security.UserAccount">
+		<property name="username" value="admin3" />
+		<property name="password" value="32cacb2f994f6b42183a1300d9a3e8d6" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="user1" />
+		<property name="password" value="24c9e15e52afc47c225b757e7bee1f9d" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="user2" />
+		<property name="password" value="7e58d63b60197ceb55a1c487989a3720" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2LU" class="security.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="42c63ad66d4dc07ed17753772bef96d6" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="3dc67f80a03324e01b1640f45d107485" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="userAccount9" class="security.UserAccount">
+		<property name="username" value="sponsor3" />
+		<property name="password" value="857a54956061fdc1b88d7722cafe6519" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount10" class="security.UserAccount">
+		<property name="username" value="sponsor4" />
+		<property name="password" value="a8be034fe44a453e912feadc414dc803" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount11" class="security.UserAccount">
+		<property name="username" value="user3" />
+		<property name="password" value="92877af70a45fd6a2ed7fe81e1236b78" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount12" class="security.UserAccount">
+		<property name="username" value="sponsor5" />
+		<property name="password" value="d6d7f85c15bbb451ef50b704b3693033" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="SPONSOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount1Ma" class="security.UserAccount">
+		<property name="username" value="nutritionist1" />
+		<property name="password" value="768261ab8b85bc8b04c1a5e840056108" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="NUTRITIONIST" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2Ma" class="security.UserAccount">
+		<property name="username" value="nutritionist2" />
+		<property name="password" value="ca0d82372ee05801973127ea6414b21d" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="NUTRITIONIST" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount3Ma" class="security.UserAccount">
+		<property name="username" value="nutritionist3" />
+		<property name="password" value="9c360887116bf2e02328f65d4680cb16" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="NUTRITIONIST" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="userAccount1Cook" class="security.UserAccount">
+		<property name="username" value="cook1" />
+		<!-- El hash es de Cook1 -->
+		<property name="password" value="21c4ffc0cb0f29298351f18b3e468c6a" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COOK" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2Cook" class="security.UserAccount">
+		<property name="username" value="cook2" />
+		<!-- El hash es de Cook2 -->
+		<property name="password" value="b9f1f95dc95b07665bef30ea7cc9c1fd" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COOK" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount3Cook" class="security.UserAccount">
+		<property name="username" value="cook3" />
+		<!-- El hash es de Cook3 -->
+		<property name="password" value="c50610607f396b126c94f5eb338f99ae" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="COOK" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- User1 -->
+
+	<bean id="user1" class="domain.User">
+		<property name="name" value="Mario" />
+		<property name="surname" value="Romero" />
+		<property name="emailAddress" value="user1@emailAddress.com" />
+		<property name="phoneNumber" value="+34 654987321" />
+		<property name="postalAddress" value="41011" />
+
+		<property name="userAccount">
+			<ref bean="userAccount2"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder1"></ref>
+				<ref bean="folder2"></ref>
+				<ref bean="folder3"></ref>
+				<ref bean="folder4"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+				<ref bean="socialIdentity1"></ref>
+				<ref bean="socialIdentity2"></ref>
+			</list>
+		</property>
+
+		<property name="following">
+			<list>
+
+				<ref bean="user2" />
+			</list>
+		</property>
+
+		<property name="followers">
+			<list>
+			</list>
+		</property>
+
+		<property name="authoredRecipes">
+			<list>
+				<ref bean="recipe1"></ref>
+				<ref bean="recipe1copy"></ref>
+			</list>
+		</property>
+
+
+		<property name="likedRecipes">
+			<list>
+				<ref bean="recipe2" />
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="comments">
+			<list>
+				<ref bean="comment2" />
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+				<ref bean="MClass3" />
+
+			</list>
+		</property>
+	</bean>
+
+	
+
+
+	<!-- Category -->
+	<bean name="category1" class="domain.Category">
+		<property name="name" value="Hot Dishes"></property>
+		<property name="description" value="In this category we will have hot dishes."></property>
+		<property name="categories">
+			<list>
+				<ref bean="category2"></ref>
+				<ref bean="category3"></ref>
+			</list>
+		</property>
+
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean name="category2" class="domain.Category">
+		<property name="name" value="Vegan"></property>
+		<property name="description"
+			value="In this category we will have vegan hot dishes."></property>
+		<property name="categoryFather" ref="category1"></property>
+		<property name="categories">
+			<list>
+				<ref bean="category8" />
+			</list>
+		</property>
+
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="category3" class="domain.Category">
+		<property name="name" value="Non-Vegan"></property>
+		<property name="description"
+			value="In this category we will have non-vegan hot dishes."></property>
+		<property name="categoryFather" ref="category1"></property>
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+		<property name="recipes">
+			<list>
+				<ref bean="recipe1"></ref>
+				<ref bean="recipe1copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="category4" class="domain.Category">
+		<property name="name" value="Meat" />
+		<property name="description" value="This category will contain meat recipes." />
+		<property name="picture"
+			value="http://www.carnesmag.mx/images/carnes_gral.jpg?crc=139417218" />
+		<property name="tags" value="#meat" />
+		<property name="categories">
+			<list>
+				<ref bean="category5" />
+				<ref bean="category6" />
+			</list>
+		</property>
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="category5" class="domain.Category">
+		<property name="name" value="Beef" />
+		<property name="description" value="Beef dishes." />
+		<property name="picture"
+			value="http://www.proveedores.com/site/category/carne-de-ternera.jpg" />
+
+		<property name="categoryFather">
+
+			<ref bean="category4" />
+
+		</property>
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="category6" class="domain.Category">
+		<property name="name" value="Chicken" />
+		<property name="description" value="Chicken dishes." />
+		<property name="picture"
+			value="http://vivirsanos.com/wp-content/uploads/2014/10/propiedades-del-pollo.jpg" />
+
+		<property name="categoryFather">
+
+			<ref bean="category4" />
+
+
+		</property>
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="category7" class="domain.Category">
+		<property name="name" value="Desserts" />
+		<property name="description" value="Dessert dishes." />
+		<property name="recipes">
+			<list>
+				<ref bean="recipe2" />
+				<ref bean="recipe2copy" />
+				<ref bean="recipe3" />
+			</list>
+		</property>
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="category8" class="domain.Category">
+		<property name="name" value="Raw"></property>
+		<property name="description"
+			value="In this category we will have raw vegan hot dishes."></property>
+		<property name="categoryFather" ref="category2"></property>
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Recipes -->
+
+	<bean name="recipe1" class="domain.Recipe">
+
+		<property name="ticker" value="160501-abCD"></property>
+		<property name="title" value="Soup."></property>
+		<property name="summary"
+			value="In this recipe I'm going to show you how to make soup."></property>
+		<property name="creationDate" value="01/05/2016 17:50"></property>
+		<property name="updateDate" value="01/05/2016 17:50"></property>
+
+		<property name="author" ref="user1" />
+		<property name="pictures">
+			<list></list>
+		</property>
+		<property name="steps">
+			<list>
+				<ref bean="step1"></ref>
+				<ref bean="step2"></ref>
+				<ref bean="step3"></ref>
+				<ref bean="step4"></ref>
+				<ref bean="step5"></ref>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category3"></ref>
+			</list>
+		</property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedOnion"></ref>
+				<ref bean="quantifiedMushroom"></ref>
+				<ref bean="quantifiedChicken"></ref>
+				<ref bean="quantifiedStock"></ref>
+			</list>
+		</property>
+
+
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="likedCustomers">
+			<list>
+				<ref bean="user2" />
+
+			</list>
+		</property>
+	</bean>
+
+	<bean name="recipe1copy" class="domain.Recipe">
+
+		<property name="ticker" value="160501-abCP"></property>
+		<property name="title" value="Soup."></property>
+		<property name="summary"
+			value="In this recipe I'm going to show you how to make soup."></property>
+		<property name="creationDate" value="01/05/2016 17:50"></property>
+		<property name="updateDate" value="01/05/2016 17:50"></property>
+		<property name="pictures">
+			<list></list>
+		</property>
+		<property name="author" ref="user1" />
+
+		<property name="steps">
+			<list>
+				<ref bean="step1copy"></ref>
+				<ref bean="step2copy"></ref>
+				<ref bean="step3copy"></ref>
+				<ref bean="step4copy"></ref>
+				<ref bean="step5copy"></ref>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category3"></ref>
+			</list>
+		</property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedOnioncopy"></ref>
+				<ref bean="quantifiedMushroomcopy"></ref>
+				<ref bean="quantifiedChickencopy"></ref>
+				<ref bean="quantifiedStockcopy"></ref>
+			</list>
+		</property>
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+				<ref bean="contest1"></ref>
+			</list>
+		</property>
+
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="likedCustomers">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Properties -->
+	<bean id="property1" class="domain.Property">
+
+		<property name="name" value="Calories"></property>
+		<property name="valueds">
+			<list>
+				<ref bean="valued1" />
+				<ref bean="valued3" />
+				<ref bean="valued4" />
+				<ref bean="valued1copy" />
+				<ref bean="valued3copy" />
+				<ref bean="valued4copy" />
+				<ref bean="valued5" />
+				<ref bean="valued8" />
+				<ref bean="valued9" />
+				<ref bean="valued5copy" />
+				<ref bean="valued8copy" />
+				<ref bean="valued9copy" />
+				<ref bean="valued42" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="property2" class="domain.Property">
+
+		<property name="name" value="Diuretic"></property>
+		<property name="valueds">
+			<list>
+				<ref bean="valued2" />
+				<ref bean="valued2copy" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="property3" class="domain.Property">
+
+		<property name="name" value="Protein"></property>
+		<property name="valueds">
+			<list>
+				<ref bean="valued6" />
+				<ref bean="valued41" />
+				<ref bean="valued7" />
+				<ref bean="valued6copy" />
+				<ref bean="valued7copy" />
+			</list>
+		</property>
+
+
+	</bean>
+
+
+
+
+	<!-- Quantified -->
+
+	<bean name="quantifiedOnion" class="domain.Quantified">
+
+		<property name="quantityInteger" value="300"></property>
+		<property name="unit" value="grams">
+
+		</property>
+
+		<property name="ingredient" ref="ingredient1"></property>
+		<property name="recipe" ref="recipe1"></property>
+
+	</bean>
+
+	<bean name="quantifiedMushroom" class="domain.Quantified">
+
+		<property name="quantityInteger" value="100"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient2"></property>
+		<property name="recipe" ref="recipe1"></property>
+
+	</bean>
+
+	<bean name="quantifiedChicken" class="domain.Quantified">
+
+		<property name="quantityDouble" value="0.5"></property>
+		<property name="unit" value="kilo-grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient3"></property>
+		<property name="recipe" ref="recipe1"></property>
+
+	</bean>
+
+	<bean name="quantifiedStock" class="domain.Quantified">
+
+		<property name="quantityInteger" value="1"></property>
+		<property name="unit" value="litres">
+		</property>
+
+		<property name="ingredient" ref="ingredient4"></property>
+		<property name="recipe" ref="recipe1"></property>
+
+	</bean>
+
+	<bean name="quantifiedOnioncopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="300"></property>
+		<property name="unit" value="grams">
+
+		</property>
+
+		<property name="ingredient" ref="ingredient1copy"></property>
+		<property name="recipe" ref="recipe1copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedMushroomcopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="100"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient2copy"></property>
+		<property name="recipe" ref="recipe1copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedChickencopy" class="domain.Quantified">
+
+		<property name="quantityDouble" value="0.5"></property>
+		<property name="unit" value="kilo-grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient3copy"></property>
+		<property name="recipe" ref="recipe1copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedStockcopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="1"></property>
+		<property name="unit" value="litres">
+		</property>
+
+		<property name="ingredient" ref="ingredient4copy"></property>
+		<property name="recipe" ref="recipe1copy"></property>
+
+	</bean>
+
+	<!-- Ingredient -->
+
+
+	<bean name="ingredient1" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Onion"></property>
+		<property name="description" value="White onion."></property>
+
+		<property name="quantifieds">
+			<list>
+
+				<ref bean="quantifiedOnion"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued1"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient2" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Mushroom"></property>
+		<property name="description" value="Well cleaned mushrooms."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedMushroom"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued2"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient3" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Chicken"></property>
+		<property name="description" value="Chicken breast and thighs."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChicken"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued3"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient4" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Stock"></property>
+		<property name="description" value="Unsalted chicken stock."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedStock"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued4"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient1copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Onion"></property>
+		<property name="description" value="White onion."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedOnioncopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued1copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient2copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Mushroom"></property>
+		<property name="description" value="Well cleaned mushrooms."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedMushroomcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued2copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient3copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Chicken"></property>
+		<property name="description" value="Chicken breast and thighs."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChickencopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued3copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient4copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Stock"></property>
+		<property name="description" value="Unsalted chicken stock."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedStockcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued4copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="valued1" class="domain.Valued">
+		<property name="value" value="30" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient1" />
+		</property>
+	</bean>
+
+	<bean id="valued2" class="domain.Valued">
+		<property name="value" value="Yes" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient2" />
+		</property>
+	</bean>
+
+	<bean id="valued3" class="domain.Valued">
+		<property name="value" value="120" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient3" />
+		</property>
+
+	</bean>
+
+	<bean id="valued4" class="domain.Valued">
+		<property name="value" value="150" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient4" />
+		</property>
+	</bean>
+
+	<bean id="valued1copy" class="domain.Valued">
+		<property name="value" value="30" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient1copy" />
+		</property>
+	</bean>
+
+	<bean id="valued2copy" class="domain.Valued">
+		<property name="value" value="Yes" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient2copy" />
+		</property>
+	</bean>
+
+	<bean id="valued3copy" class="domain.Valued">
+		<property name="value" value="120" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient3copy" />
+		</property>
+
+	</bean>
+
+	<bean id="valued4copy" class="domain.Valued">
+		<property name="value" value="150" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient4copy" />
+		</property>
+	</bean>
+
+	<!-- Step -->
+
+
+	<bean name="step1" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description" value="Cut the veggies and put them in a bowl."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step2" class="domain.Step">
+
+		<property name="number" value="2"></property>
+		<property name="description"
+			value="Chop the meat and sear it on a pot with olive oil."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step3" class="domain.Step">
+
+		<property name="number" value="3"></property>
+		<property name="description"
+			value="Remove the mean and now cook your veggies in the same pot. Add salt."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step4" class="domain.Step">
+
+		<property name="number" value="4"></property>
+		<property name="description"
+			value="Now add the meat and the chicken stock. Taste for salt."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step5" class="domain.Step">
+
+		<property name="number" value="5"></property>
+		<property name="description" value="Let simmer for an hour on medium-low heat."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step6" class="domain.Step">
+
+		<property name="number" value="6"></property>
+		<property name="description" value="Serve with bread on top."></property>
+		<property name="recipe" ref="recipe1"></property>
+	</bean>
+
+	<bean name="step1copy" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description" value="Cut the veggies and put them in a bowl."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<bean name="step2copy" class="domain.Step">
+
+		<property name="number" value="2"></property>
+		<property name="description"
+			value="Chop the meat and sear it on a pot with olive oil."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<bean name="step3copy" class="domain.Step">
+
+		<property name="number" value="3"></property>
+		<property name="description"
+			value="Remove the mean and now cook your veggies in the same pot. Add salt."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<bean name="step4copy" class="domain.Step">
+
+		<property name="number" value="4"></property>
+		<property name="description"
+			value="Now add the meat and the chicken stock. Taste for salt."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<bean name="step5copy" class="domain.Step">
+
+		<property name="number" value="5"></property>
+		<property name="description" value="Let simmer for an hour on medium-low heat."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<bean name="step6copy" class="domain.Step">
+
+		<property name="number" value="6"></property>
+		<property name="description" value="Serve with bread on top."></property>
+		<property name="recipe" ref="recipe1copy"></property>
+	</bean>
+
+	<!-- Contest -->
+
+	<bean id="contest1" class="domain.Contest">
+		<property name="title" value="Best soups." />
+		<property name="opening" value="2016/10/24 10:50" />
+		<property name="closing" value="2016/10/30 23:59" />
+
+		<property name="winners">
+			<list>
+				<ref bean="recipe1copy" />
+			</list>
+		</property>
+		<property name="recipes">
+			<list>
+				<ref bean="recipe1copy" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Recipe 2 -->
+
+	<bean name="recipe2" class="domain.Recipe">
+
+		<property name="ticker" value="160202-abCD"></property>
+		<property name="title" value="Custard"></property>
+		<property name="summary"
+			value="In this recipe I'm going to show you how to make custard"></property>
+		<property name="creationDate" value="02/02/2016 17:50"></property>
+		<property name="updateDate" value="04/04/2016 17:50"></property>
+
+		<property name="author" ref="user2" />
+		<property name="pictures">
+			<list></list>
+		</property>
+		<property name="steps">
+			<list>
+				<ref bean="step7"></ref>
+				<ref bean="step8"></ref>
+				<ref bean="step9"></ref>
+				<ref bean="step10"></ref>
+				<ref bean="step11"></ref>
+				<ref bean="step12"></ref>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category7"></ref>
+			</list>
+		</property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedCookie"></ref>
+				<ref bean="quantifiedMilk"></ref>
+				<ref bean="quantifiedEgg"></ref>
+				<ref bean="quantifiedStarch"></ref>
+				<ref bean="quantifiedSugar"></ref>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+
+		<property name="likedCustomers">
+			<list>
+				<ref bean="user1" />
+			</list>
+		</property>
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<ref bean="comment2" />
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<bean name="quantifiedCookie" class="domain.Quantified">
+
+		<property name="quantityInteger" value="50"></property>
+		<property name="unit" value="grams">
+
+
+		</property>
+
+		<property name="ingredient" ref="ingredient5"></property>
+		<property name="recipe" ref="recipe2"></property>
+
+	</bean>
+
+	<bean name="quantifiedMilk" class="domain.Quantified">
+
+		<property name="quantityInteger" value="2"></property>
+		<property name="unit" value="cups">
+		</property>
+
+		<property name="ingredient" ref="ingredient6"></property>
+		<property name="recipe" ref="recipe2"></property>
+
+	</bean>
+
+	<bean name="quantifiedEgg" class="domain.Quantified">
+
+		<property name="quantityDouble" value="3"></property>
+		<property name="unit" value="pieces">
+		</property>
+
+		<property name="ingredient" ref="ingredient7"></property>
+		<property name="recipe" ref="recipe2"></property>
+
+	</bean>
+
+	<bean name="quantifiedStarch" class="domain.Quantified">
+
+		<property name="quantityInteger" value="40"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient8"></property>
+		<property name="recipe" ref="recipe2"></property>
+
+	</bean>
+
+	<bean name="quantifiedSugar" class="domain.Quantified">
+
+		<property name="quantityInteger" value="75"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient9"></property>
+		<property name="recipe" ref="recipe2"></property>
+
+	</bean>
+
+	<bean name="ingredient5" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Cookies"></property>
+		<property name="description" value="Any cookies that you like."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedCookie"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued5"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient6" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Milk"></property>
+		<property name="description" value="Full fat milk."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedMilk"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued6"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient7" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Egg"></property>
+		<property name="description" value="Egg yolk."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedEgg"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued7"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient8" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Corn Starch"></property>
+		<property name="description" value="Regular corn starch."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedStarch"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued8"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient9" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Sugar"></property>
+		<property name="description" value="White sugar."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedSugar"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued9"></ref>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="valued5" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient5" />
+		</property>
+	</bean>
+
+	<bean id="valued6" class="domain.Valued">
+		<property name="value" value="7 grams" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient6" />
+		</property>
+	</bean>
+
+	<bean id="valued7" class="domain.Valued">
+		<property name="value" value="18 grams" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient7" />
+		</property>
+	</bean>
+
+	<bean id="valued8" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient8" />
+		</property>
+	</bean>
+
+	<bean id="valued9" class="domain.Valued">
+		<property name="value" value="400" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient9" />
+		</property>
+	</bean>
+	<bean name="step7" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description"
+			value="In a boul wisk and youlks with the sugar until white."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="step8" class="domain.Step">
+
+		<property name="number" value="2"></property>
+		<property name="description" value="heat the milk until simmering, not boiling."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="step9" class="domain.Step">
+
+		<property name="number" value="3"></property>
+		<property name="description" value="Add the cornstarch to the egg mix and wisk."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="step10" class="domain.Step">
+
+		<property name="number" value="4"></property>
+		<property name="description"
+			value="Add slowly the milk to the yolk mixture while wisking."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="step11" class="domain.Step">
+
+		<property name="number" value="5"></property>
+		<property name="description"
+			value="Pour the mixture to the pot again and mix until thicken."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="step12" class="domain.Step">
+
+		<property name="number" value="6"></property>
+		<property name="description"
+			value="Pour in a bowl and decorate with the cookies."></property>
+		<property name="recipe" ref="recipe2"></property>
+	</bean>
+
+	<bean name="recipe2copy" class="domain.Recipe">
+
+		<property name="ticker" value="160202-abCP"></property>
+		<property name="title" value="Custard"></property>
+		<property name="summary"
+			value="In this recipe I'm going to show you how to make custard"></property>
+		<property name="creationDate" value="02/02/2016 17:50"></property>
+		<property name="updateDate" value="04/04/2016 17:50"></property>
+		<property name="pictures">
+			<list></list>
+		</property>
+		<property name="author" ref="user2" />
+
+		<property name="steps">
+			<list>
+				<ref bean="step7copy"></ref>
+				<ref bean="step8copy"></ref>
+				<ref bean="step9copy"></ref>
+				<ref bean="step10copy"></ref>
+				<ref bean="step11copy"></ref>
+				<ref bean="step12copy"></ref>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category7"></ref>
+			</list>
+		</property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedCookiecopy"></ref>
+				<ref bean="quantifiedMilkcopy"></ref>
+				<ref bean="quantifiedEggcopy"></ref>
+				<ref bean="quantifiedStarchcopy"></ref>
+				<ref bean="quantifiedSugarcopy"></ref>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+				<ref bean="contest2" />
+			</list>
+		</property>
+
+		<property name="likedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean name="quantifiedCookiecopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="50"></property>
+		<property name="unit" value="grams">
+
+
+		</property>
+
+		<property name="ingredient" ref="ingredient5copy"></property>
+		<property name="recipe" ref="recipe2copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedMilkcopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="2"></property>
+		<property name="unit" value="cups">
+		</property>
+
+		<property name="ingredient" ref="ingredient6copy"></property>
+		<property name="recipe" ref="recipe2copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedEggcopy" class="domain.Quantified">
+
+		<property name="quantityDouble" value="3"></property>
+		<property name="unit" value="pieces">
+		</property>
+
+		<property name="ingredient" ref="ingredient7copy"></property>
+		<property name="recipe" ref="recipe2copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedStarchcopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="40"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient8copy"></property>
+		<property name="recipe" ref="recipe2copy"></property>
+
+	</bean>
+
+	<bean name="quantifiedSugarcopy" class="domain.Quantified">
+
+		<property name="quantityInteger" value="75"></property>
+		<property name="unit" value="grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient9copy"></property>
+		<property name="recipe" ref="recipe2copy"></property>
+
+	</bean>
+
+	<bean name="ingredient5copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Cookies"></property>
+		<property name="description" value="Any cookies that you like."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedCookiecopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued5copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient6copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Milk"></property>
+		<property name="description" value="Full fat milk."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedMilkcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued6copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient7copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Egg"></property>
+		<property name="description" value="Egg yolk."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedEggcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued7copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient8copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Corn Starch"></property>
+		<property name="description" value="Regular corn starch."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedStarchcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued8copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient9copy" class="domain.Ingredient">
+
+
+
+		<property name="name" value="Sugar"></property>
+		<property name="description" value="White sugar."></property>
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedSugarcopy"></ref>
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued9copy"></ref>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="valued5copy" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient5copy" />
+		</property>
+	</bean>
+
+	<bean id="valued6copy" class="domain.Valued">
+		<property name="value" value="7 grams" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient6copy" />
+		</property>
+	</bean>
+
+	<bean id="valued7copy" class="domain.Valued">
+		<property name="value" value="18 grams" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient7copy" />
+		</property>
+	</bean>
+
+	<bean id="valued8copy" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient8copy" />
+		</property>
+	</bean>
+
+	<bean id="valued9copy" class="domain.Valued">
+		<property name="value" value="400" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient9copy" />
+		</property>
+	</bean>
+
+
+	<bean name="step7copy" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description"
+			value="In a boul wisk and youlks with the sugar until white."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean name="step8copy" class="domain.Step">
+
+		<property name="number" value="2"></property>
+		<property name="description" value="heat the milk until simmering, not boiling."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean name="step9copy" class="domain.Step">
+
+		<property name="number" value="3"></property>
+		<property name="description" value="Add the cornstarch to the egg mix and wisk."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean name="step10copy" class="domain.Step">
+
+		<property name="number" value="4"></property>
+		<property name="description"
+			value="Add slowly the milk to the yolk mixture while wisking."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean name="step11copy" class="domain.Step">
+
+		<property name="number" value="5"></property>
+		<property name="description"
+			value="Pour the mixture to the pot again and mix until thicken."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean name="step12copy" class="domain.Step">
+
+		<property name="number" value="6"></property>
+		<property name="description"
+			value="Pour in a bowl and decorate with the cookies."></property>
+		<property name="recipe" ref="recipe2copy"></property>
+	</bean>
+
+	<bean id="recipe4" class="domain.Recipe">
+		<property name="ticker" value="161020-ASDF" />
+		<property name="title" value="Sweet and sour chicken" />
+		<property name="summary"
+			value="In this recipe we will show how to do a delicious sweet and sour chicken" />
+		<property name="creationDate" value="01/05/2016 17:50" />
+		<property name="updateDate" value="01/05/2016 17:50" />
+		<property name="pictures">
+			<list>
+				<value>http://rasamalaysia.com/wp-content/uploads/2014/08/sweet-sour-chicken-thumb.jpg
+				</value>
+			</list>
+		</property>
+		<property name="categories">
+			<list>
+				<ref bean="category1" />
+			</list>
+		</property>
+		<property name="author" ref="user2" />
+
+
+		<property name="steps">
+			<list>
+				<ref bean="step41" />
+				<ref bean="step42" />
+
+			</list>
+		</property>
+
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChicken1" />
+				<ref bean="quantifiedSweetandSourSauce" />
+			</list>
+		</property>
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="likedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<bean name="quantifiedChicken1" class="domain.Quantified">
+
+		<property name="quantityInteger" value="1"></property>
+		<property name="unit" value="kilo-grams">
+		</property>
+
+		<property name="ingredient" ref="ingredient41" />
+		<property name="recipe" ref="recipe4" />
+
+	</bean>
+	<bean id="quantifiedSweetandSourSauce" class="domain.Quantified">
+		<property name="quantityDouble" value="80" />
+		<property name="unit" value="millilitres">
+		</property>
+
+		<property name="recipe" ref="recipe4" />
+		<property name="ingredient" ref="ingredient42" />
+
+	</bean>
+	<bean name="ingredient41" class="domain.Ingredient">
+
+		<property name="name" value="Chicken" />
+		<property name="description" value="Chicken" />
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChicken" />
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued41" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean name="ingredient42" class="domain.Ingredient">
+
+		<property name="name" value="Sweet and Sour Sauce" />
+		<property name="description" value="Sweet and Sour Sauce" />
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedSweetandSourSauce" />
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued42" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="valued41" class="domain.Valued">
+		<property name="value" value="30" />
+		<property name="property">
+			<ref bean="property3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient41" />
+		</property>
+	</bean>
+	<bean id="valued42" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient42" />
+		</property>
+	</bean>
+
+
+	<bean name="step41" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description" value="Cut the chicken."></property>
+		<property name="recipe" ref="recipe4"></property>
+	</bean>
+
+	<bean name="step42" class="domain.Step">
+		<property name="number" value="2"></property>
+		<property name="description"
+			value="Cook the chicken with de sweet and sour sauce."></property>
+		<property name="recipe" ref="recipe4"></property>
+	</bean>
+
+
+
+	<!-- contest 2 -->
+	<bean id="contest2" class="domain.Contest">
+		<property name="title" value="Best desserts." />
+		<property name="opening" value="2016/10/24 10:50" />
+		<property name="closing" value="2016/10/30 23:59" />
+		<property name="winners">
+			<list></list>
+		</property>
+		<property name="recipes">
+			<list>
+				<ref bean="recipe1copy" />
+				<ref bean="recipe2copy" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- contest 3 -->
+	<bean id="contest3" class="domain.Contest">
+		<property name="title" value="Best pasta dishes." />
+		<property name="opening" value="2016/10/24 10:50" />
+		<property name="closing" value="2016/10/30 23:59" />
+
+		<property name="winners">
+			<list></list>
+		</property>
+		<property name="recipes">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+	<!-- User 2 -->
+
+	<bean id="user2" class="domain.User">
+		<property name="name" value="Belen" />
+		<property name="surname" value="Vazquez" />
+		<property name="emailAddress" value="user2@emailAddress.com" />
+		<property name="phoneNumber" value="+34 654978963" />
+		<property name="postalAddress" value="41011" />
+
+		<property name="userAccount">
+			<ref bean="userAccount7"></ref>
+		</property>
+
+		<property name="comments">
+			<list>
+				<ref bean="comment1" />
+				<ref bean="comment3" />
+				<ref bean="comment4" />
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder5"></ref>
+				<ref bean="folder6"></ref>
+				<ref bean="folder7"></ref>
+				<ref bean="folder8"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+				<ref bean="socialIdentity3" />
+				<ref bean="socialIdentity4" />
+			</list>
+		</property>
+
+
+		<property name="followers">
+			<list>
+				<ref bean="user1" />
+			</list>
+		</property>
+
+		<property name="following">
+			<list>
+				<ref bean="nutritionist1Ma" />
+			</list>
+		</property>
+
+		<property name="authoredRecipes">
+			<list>
+				<ref bean="recipe2" />
+				<ref bean="recipe2copy" />
+				<ref bean="recipe4" />
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+				<ref bean="recipe1" />
+			</list>
+		</property>
+
+		<property name="likedRecipes">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="user3" class="domain.User">
+		<property name="name" value="Manuel" />
+		<property name="surname" value="Jimenez" />
+		<property name="emailAddress" value="user3@emailAddress.com" />
+		<property name="phoneNumber" value="+34 657852167" />
+		<property name="postalAddress" value="41011" />
+
+		<property name="userAccount">
+			<ref bean="userAccount11"></ref>
+		</property>
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder26"></ref>
+				<ref bean="folder27"></ref>
+				<ref bean="folder28"></ref>
+				<ref bean="folder29"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+		<property name="followers">
+			<list>
+			</list>
+		</property>
+		<property name="following">
+			<list>
+			</list>
+		</property>
+
+		<property name="authoredRecipes">
+			<list>
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+			</list>
+		</property>
+
+		<property name="likedRecipes">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<!-- Recipe 3 -->
+
+
+	<bean id="recipe3" class="domain.Recipe">
+		<property name="ticker" value="160908-wsqa" />
+		<property name="title" value="3 Chocolates cake" />
+		<property name="summary"
+			value="In this recipe we will show how to do a delicious 3 chocolates cake" />
+		<property name="creationDate" value="01/06/2016 17:50" />
+		<property name="updateDate" value="01/07/2016 17:50" />
+		<property name="pictures">
+			<list>
+				<value>http://www.justputzing.com/wp-content/uploads/2014/01/DSC_3110.jpg
+				</value>
+			</list>
+		</property>
+
+		<property name="hints" value="Remover bien para que no se queme"></property>
+		<property name="categories">
+			<list>
+				<ref bean="category7" />
+			</list>
+		</property>
+		<property name="author" ref="user1" />
+
+		<property name="comments">
+			<list>
+				<ref bean="comment3" />
+				<ref bean="comment4" />
+			</list>
+		</property>
+
+		<property name="steps">
+			<list>
+				<ref bean="step31" />
+				<ref bean="step32" />
+			</list>
+		</property>
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChocolate" />
+				<ref bean="quantifiedCookies1" />
+				<ref bean="quantifiedWhipped" />
+			</list>
+		</property>
+		<property name="likedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="dislikedCustomers">
+			<list>
+			</list>
+		</property>
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="quantifiedChocolate" class="domain.Quantified">
+		<property name="quantityInteger" value="450" />
+		<property name="unit" value="grams">
+		</property>
+		<property name="recipe" ref="recipe3" />
+
+		<property name="ingredient" ref="ingredient31" />
+
+	</bean>
+
+	<bean id="quantifiedCookies1" class="domain.Quantified">
+		<property name="quantityInteger" value="100" />
+		<property name="unit" value="grams">
+		</property>
+		<property name="recipe">
+			<ref bean="recipe3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient32" />
+		</property>
+	</bean>
+
+	<bean id="quantifiedWhipped" class="domain.Quantified">
+		<property name="quantityInteger" value="300" />
+		<property name="unit" value="grams">
+		</property>
+		<property name="recipe">
+			<ref bean="recipe3" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient33" />
+		</property>
+	</bean>
+
+
+	<bean name="ingredient31" class="domain.Ingredient">
+
+		<property name="name" value="Chocolate" />
+		<property name="description" value="White,black and milk Chocolates" />
+
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedChocolate" />
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued31" />
+			</list>
+		</property>
+
+	</bean>
+
+
+
+	<bean name="ingredient32" class="domain.Ingredient">
+
+		<property name="name" value="Cookies" />
+		<property name="description" value="Cookies" />
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedCookies1" />
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued32" />
+			</list>
+		</property>
+
+	</bean>
+	<bean name="ingredient33" class="domain.Ingredient">
+
+		<property name="name" value="Whipped Cream" />
+		<property name="description" value="Heavy already whipped cream." />
+		<property name="quantifieds">
+			<list>
+				<ref bean="quantifiedWhipped" />
+			</list>
+		</property>
+
+		<property name="valueds">
+			<list>
+				<ref bean="valued33" />
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="valued31" class="domain.Valued">
+		<property name="value" value="450" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient31" />
+		</property>
+	</bean>
+	<bean id="valued32" class="domain.Valued">
+		<property name="value" value="250" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient32" />
+		</property>
+	</bean>
+	<bean id="valued33" class="domain.Valued">
+		<property name="value" value="300" />
+		<property name="property">
+			<ref bean="property1" />
+		</property>
+		<property name="ingredient">
+			<ref bean="ingredient33" />
+		</property>
+	</bean>
+
+	<bean name="step31" class="domain.Step">
+
+		<property name="number" value="1"></property>
+		<property name="description"
+			value="Mix the chocolate with the whipped cream and pour."></property>
+		<property name="recipe" ref="recipe3"></property>
+	</bean>
+
+	<bean name="step32" class="domain.Step">
+		<property name="number" value="2"></property>
+		<property name="description" value="Decorate with cookies."></property>
+		<property name="recipe" ref="recipe3"></property>
+	</bean>
+
+
+	<!-- Comments -->
+
+	<bean id="comment1" class="domain.Comment">
+		<property name="title" value="Comentario positivo"></property>
+		<property name="text" value="Me 
+		ha gustado mucho la receta."></property>
+		<property name="stars" value="5"></property>
+		<property name="recipe" ref="recipe1"></property>
+		<property name="customer" ref="user2"></property>
+
+	</bean>
+
+	<bean id="comment2" class="domain.Comment">
+		<property name="title" value="Comentario positivo" />
+		<property name="text" value="I liked the recipe." />
+		<property name="stars" value="4" />
+		<property name="customer" ref="user1" />
+		<property name="recipe" ref="recipe2" />
+	</bean>
+	<bean id="comment3" class="domain.Comment">
+		<property name="title" value="Comentario Positivo" />
+		<property name="text" value="Nice recipe but it couldbe better." />
+		<property name="stars" value="5" />
+		<property name="customer" ref="user2" />
+		<property name="recipe" ref="recipe3" />
+	</bean>
+	<bean id="comment4" class="domain.Comment">
+		<property name="title" value="Comentario negativo" />
+		<property name="text" value="But it is good!." />
+		<property name="stars" value="2" />
+		<property name="customer" ref="user2" />
+		<property name="recipe" ref="recipe3" />
+	</bean>
+
+
+	<!-- Sponsor -->
+
+
+
+	<bean id="Sponsor01" class="domain.Sponsor">
+		<property name="name" value="Juan" />
+		<property name="surname" value="Perez Perez" />
+		<property name="emailAddress" value="jperez@cocacola.com" />
+		<property name="phoneNumber" value="+33647855874" />
+		<property name="postalAddress" value="21452" />
+		<property name="companyName" value="Coca-Cola" />
+		<property name="userAccount">
+			<ref bean="userAccount2LU"></ref>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="bills">
+			<list>
+				<ref bean="Bill01" />
+				<ref bean="Bill02" />
+				<ref bean="Bill03" />
+			</list>
+		</property>
+		<property name="creditCards">
+			<list>
+				<ref bean="Card01" />
+			</list>
+		</property>
+		<property name="campaigns">
+			<list>
+				<ref bean="ColaParaTodos" />
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder9"></ref>
+				<ref bean="folder10"></ref>
+				<ref bean="folder11"></ref>
+				<ref bean="folder12"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="Card01" class="domain.CreditCard">
+		<property name="holderName" value="Jesus Luna Monchul" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4267442202224386" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="2020" />
+		<property name="codeCVV" value="359" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor01" />
+
+		</property>
+	</bean>
+
+	<bean id="ColaParaTodos" class="domain.Campaign">
+		<property name="name" value="Cola Para Todos" />
+		<property name="startDate" value="06/01/2016 12:00" />
+		<property name="endDate" value="09/01/2016 12:00" />
+		<property name="numBanners" value="6" />
+		<property name="maxBannersDisplayed" value="10" />
+		<property name="star" value="false" />
+		<property name="banners"
+			value="http://dineroclub.net/wp-content/uploads/2013/07/cocacola3-1024x298.jpg" />
+		<property name="sponsor" ref="Sponsor01" />
+		<property name="bills">
+			<list>
+				<ref bean="Bill01" />
+				<ref bean="Bill02" />
+				<ref bean="Bill03" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Bill01" class="domain.Bill">
+		<property name="created" value="07/02/2016 10:30" />
+		<property name="paid" value="11/02/2010 20:30" />
+		<property name="cost" value="50.5" />
+		<property name="description" value="Banderitas de colores" />
+		<property name="sponsor" ref="Sponsor01" />
+		<property name="campaign" ref="ColaParaTodos" />
+	</bean>
+
+
+	<bean id="Bill02" class="domain.Bill">
+		<property name="created" value="08/02/2016 20:30" />
+		<property name="paid" value="11/05/2010 10:30" />
+		<property name="cost" value="1478.5" />
+		<property name="description" value="Carteles luminosos" />
+		<property name="sponsor" ref="Sponsor01" />
+		<property name="campaign" ref="ColaParaTodos" />
+	</bean>
+
+	<bean id="Bill03" class="domain.Bill">
+		<property name="created" value="09/02/2016 20:30" />
+		<property name="cost" value="1478.5" />
+		<property name="description" value="Carteles en papel" />
+		<property name="sponsor" ref="Sponsor01" />
+		<property name="campaign" ref="ColaParaTodos" />
+	</bean>
+
+
+
+	<bean id="Sponsor02" class="domain.Sponsor">
+		<property name="name" value="Alberto" />
+		<property name="surname" value="Torres Leon" />
+		<property name="emailAddress" value="atorresleon@gallinablanca.com" />
+		<property name="phoneNumber" value="+34254775412" />
+		<property name="postalAddress" value="58742" />
+		<property name="companyName" value="Gallina Blanca" />
+		<property name="userAccount">
+			<ref bean="userAccount8"></ref>
+		</property>
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="creditCards">
+			<list>
+				<ref bean="Card02" />
+			</list>
+		</property>
+		<property name="campaigns">
+			<list>
+				<ref bean="Cueces o enriqueces" />
+				<ref bean="Cocinitas" />
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder13"></ref>
+				<ref bean="folder14"></ref>
+				<ref bean="folder15"></ref>
+				<ref bean="folder16"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="Card02" class="domain.CreditCard">
+		<property name="holderName" value="Alejandro Chaves Medina" />
+		<property name="brandName" value="MasterCard" />
+		<property name="number" value="5668490863849415" />
+		<property name="expirationMonth" value="11" />
+		<property name="expirationYear" value="2019" />
+		<property name="codeCVV" value="247" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor02" />
+
+		</property>
+	</bean>
+	<bean id="Cueces o enriqueces" class="domain.Campaign">
+		<property name="name" value="Cueces o enriqueces" />
+		<property name="startDate" value="10/20/2016 10:30" />
+		<property name="endDate" value="10/12/2020 22:00" />
+		<property name="numBanners" value="5" />
+		<property name="maxBannersDisplayed" value="120" />
+		<property name="star" value="false" />
+		<property name="sponsor" ref="Sponsor02" />
+		<property name="banners"
+			value="http://www.tuotrosuper.com/media/catalog/category/banner_sopas_662x172.jpg,http://www.tuotrosuper.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/0/5/053372.jpg" />
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Cocinitas" class="domain.Campaign">
+		<property name="name" value="Cocinitas" />
+		<property name="startDate" value="10/20/2016 10:30" />
+		<property name="endDate" value="10/12/2017 22:00" />
+		<property name="numBanners" value="5" />
+		<property name="maxBannersDisplayed" value="200" />
+		<property name="star" value="true" />
+		<property name="sponsor" ref="Sponsor02" />
+		<property name="banners"
+			value="http://www.canalcocina.es/minisites_int/blogueros2012/imagenes/banner-opciones-2.jpg" />
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="Sponsor03" class="domain.Sponsor">
+		<property name="name" value="Juan" />
+		<property name="surname" value="Cortes" />
+		<property name="emailAddress" value="jcortes@masterchef.com" />
+		<property name="phoneNumber" value="+349547441" />
+		<property name="postalAddress" value="14785" />
+		<property name="companyName" value="MasterChef" />
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount9"></ref>
+		</property>
+		<property name="creditCards">
+			<list>
+				<ref bean="Card03" />
+			</list>
+		</property>
+		<property name="campaigns">
+			<list>
+				<ref bean="Cocinero Master Serie" />
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder17"></ref>
+				<ref bean="folder18"></ref>
+				<ref bean="folder19"></ref>
+				<ref bean="folder20"></ref>
+				<ref bean="folder21"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="Card03" class="domain.CreditCard">
+		<property name="holderName" value="Frnacisco Dominguez Mena" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4487357507650917" />
+		<property name="expirationMonth" value="5" />
+		<property name="expirationYear" value="2020" />
+		<property name="codeCVV" value="654" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor03" />
+
+
+		</property>
+	</bean>
+
+	<bean id="Sponsor04" class="domain.Sponsor">
+		<property name="name" value="Melany" />
+		<property name="surname" value="Cortes" />
+		<property name="emailAddress" value="mcortes@masterchef.com" />
+		<property name="phoneNumber" value="+349879441" />
+		<property name="postalAddress" value="58214" />
+		<property name="companyName" value="Chocolaties" />
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount10"></ref>
+		</property>
+		<property name="creditCards">
+			<list>
+				<ref bean="Card04" />
+			</list>
+		</property>
+		<property name="campaigns">
+			<list>
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder22"></ref>
+				<ref bean="folder23"></ref>
+				<ref bean="folder24"></ref>
+				<ref bean="folder25"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="Card04" class="domain.CreditCard">
+		<property name="holderName" value="Frnacisco Dominguez Mena" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4487357507650917" />
+		<property name="expirationMonth" value="5" />
+		<property name="expirationYear" value="2020" />
+		<property name="codeCVV" value="654" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor04" />
+
+
+		</property>
+	</bean>
+
+	<bean id="Cocinero Master Serie" class="domain.Campaign">
+		<property name="name" value="Cocinero Master Serie" />
+		<property name="startDate" value="10/11/2016 11:00" />
+		<property name="endDate" value="15/10/2020 22:00" />
+		<property name="numBanners" value="2" />
+		<property name="maxBannersDisplayed" value="100" />
+		<property name="star" value="false" />
+		<property name="sponsor" ref="Sponsor03" />
+		<property name="banners"
+			value="http://i1156.photobucket.com/albums/p562/WALKCAM/masterchef_banner_zps9537a09e.jpg" />
+		<property name="bills">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Sponsor05" class="domain.Sponsor">
+		<property name="name" value="Maria" />
+		<property name="surname" value="Jimenez" />
+		<property name="emailAddress" value="mjim@masterchef.com" />
+		<property name="phoneNumber" value="+349858214" />
+		<property name="postalAddress" value="58284" />
+		<property name="companyName" value="Nannies" />
+		<property name="bills">
+			<list>
+				<ref bean="Bill04" />
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount12"></ref>
+		</property>
+		<property name="creditCards">
+			<list>
+				<ref bean="Card05" />
+				<ref bean="Card06" />
+			</list>
+		</property>
+		<property name="campaigns">
+			<list>
+				<ref bean="Nonnas in the kitchen" />
+			</list>
+		</property>
+
+		<property name="folders">
+			<list>
+
+				<ref bean="folder30"></ref>
+				<ref bean="folder31"></ref>
+				<ref bean="folder32"></ref>
+				<ref bean="folder23"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Card05" class="domain.CreditCard">
+		<property name="holderName" value="Manuel Jimenez" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4487357507650917" />
+		<property name="expirationMonth" value="5" />
+		<property name="expirationYear" value="2020" />
+		<property name="codeCVV" value="654" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor05" />
+
+
+		</property>
+	</bean>
+
+	<bean id="Card06" class="domain.CreditCard">
+		<property name="holderName" value="Andres Campos" />
+		<property name="brandName" value="Visa" />
+		<property name="number" value="4487357507650917" />
+		<property name="expirationMonth" value="5" />
+		<property name="expirationYear" value="2020" />
+		<property name="codeCVV" value="653" />
+		<property name="sponsor">
+
+			<ref bean="Sponsor05" />
+
+
+		</property>
+	</bean>
+
+
+	<bean id="Nonnas in the kitchen" class="domain.Campaign">
+		<property name="name" value="Nonnas in the kitchen" />
+		<property name="startDate" value="01/01/2016 11:00" />
+		<property name="endDate" value="02/01/2016 22:00" />
+		<property name="numBanners" value="2" />
+		<property name="maxBannersDisplayed" value="5" />
+		<property name="star" value="true" />
+		<property name="sponsor" ref="Sponsor05" />
+		<property name="banners"
+			value="http://i.ytimg.com/u/NbngWUqL2eqRw12yAwcICg/channels4_banner.jpg?v=5176991a" />
+		<property name="bills">
+			<list>
+				<ref bean="Bill04" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Bill04" class="domain.Bill">
+		<property name="created" value="02/01/2016 22:30" />
+		<property name="paid" value="05/01/2016 22:30" />
+		<property name="cost" value="147008.5" />
+		<property name="description" value="Advertising" />
+		<property name="sponsor" ref="Sponsor05" />
+		<property name="campaign" ref="Nonnas in the kitchen" />
+	</bean>
+
+	<!-- Nutritionist -->
+
+	<bean id="endorser1Ma" class="domain.Endorser">
+		<property name="homepage" value="http://www.endorser.com?=0x001" />
+		<property name="name" value="Pepe Perez" />
+		<property name="curricula">
+			<ref bean="curriculum1Ma" />
+		</property>
+	</bean>
+
+	<bean id="curriculum1Ma" class="domain.Curriculum">
+		<property name="photo" value="http://www.photoCurriculum.com?=0x001" />
+		<property name="educationSection" value="Grado Superior Fp Cocina" />
+		<property name="experienceSection" value="6 meses en Porta Rossa" />
+		<property name="hobbySection" value="Tenis" />
+		<property name="nutritionist">
+			<ref bean="nutritionist1Ma" />
+		</property>
+
+		<property name="endorsers">
+			<list>
+				<ref bean="endorser1Ma" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Nutritionist -->
+	<bean id="nutritionist1Ma" class="domain.Nutritionist">
+		<property name="name" value="Manuel" />
+		<property name="surname" value="Gomez" />
+		<property name="emailAddress" value="nutritionist1Ma@emailAddress.com" />
+		<property name="phoneNumber" value="+34 654981221" />
+		<property name="postalAddress" value="41010" />
+
+		<property name="userAccount">
+			<ref bean="userAccount1Ma"></ref>
+		</property>
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass3" />
+			</list>
+		</property>
+		<property name="folders">
+			<list>
+				<ref bean="folder1Ma"></ref>
+				<ref bean="folder2Ma"></ref>
+				<ref bean="folder3Ma"></ref>
+				<ref bean="folder4Ma"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+				<ref bean="socialIdentity1Ma"></ref>
+			</list>
+		</property>
+
+		<property name="likedRecipes">
+			<list>
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+
+			</list>
+		</property>
+		<property name="followers">
+			<list>
+				<ref bean="user2" />
+			</list>
+		</property>
+
+		<property name="following">
+			<list>
+				<ref bean="nutritionist2Ma" />
+			</list>
+		</property>
+
+
+		<property name="curriculum">
+			<ref bean="curriculum1Ma" />
+		</property>
+
+		<property name="ingredients">
+			<list>
+				<ref bean="ingredient1" />
+				<ref bean="ingredient2" />
+				<ref bean="ingredient3" />
+				<ref bean="ingredient4" />
+				<ref bean="ingredient5" />
+				<ref bean="ingredient6" />
+				<ref bean="ingredient7" />
+				<ref bean="ingredient8" />
+				<ref bean="ingredient9" />
+				<ref bean="ingredient4" />
+				<ref bean="ingredient41" />
+				<ref bean="ingredient42" />
+				<ref bean="ingredient31" />
+				<ref bean="ingredient32" />
+				<ref bean="ingredient32" />
+
+			</list>
+		</property>
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="nutritionist2Ma" class="domain.Nutritionist">
+		<property name="name" value="Fran" />
+		<property name="surname" value="Perez" />
+		<property name="emailAddress" value="nutritionist2Ma@emailAddress.com" />
+		<property name="phoneNumber" value="+34 654921221" />
+		<property name="postalAddress" value="41011" />
+		<property name="likedRecipes">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount2Ma"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder5Ma"></ref>
+				<ref bean="folder6Ma"></ref>
+				<ref bean="folder7Ma"></ref>
+				<ref bean="folder8Ma"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+				<ref bean="socialIdentity2Ma"></ref>
+			</list>
+		</property>
+
+
+		<property name="followers">
+			<list>
+
+				<ref bean="nutritionist1Ma" />
+			</list>
+		</property>
+
+		<property name="following">
+			<list>
+			</list>
+		</property>
+
+		<property name="ingredients">
+			<list>
+			</list>
+		</property>
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="curriculum3Ma" class="domain.Curriculum">
+		<property name="photo" value="http://www.photoCurriculum.com?=0x003" />
+		<property name="educationSection" value="Grado Superior Fp Cocina" />
+		<property name="experienceSection" value="3 meses en Foster's Hollywood" />
+		<property name="hobbySection" value="Ver tv" />
+		<property name="nutritionist">
+			<ref bean="nutritionist3Ma" />
+		</property>
+		<property name="endorsers">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="nutritionist3Ma" class="domain.Nutritionist">
+		<property name="name" value="Daniel" />
+		<property name="surname" value="Vazquez" />
+		<property name="emailAddress" value="nutritionist3Ma@emailAddress.com" />
+		<property name="phoneNumber" value="+34 654181221" />
+		<property name="postalAddress" value="41011" />
+		<property name="likedRecipes">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="dislikedRecipes">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount3Ma"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder9Ma"></ref>
+				<ref bean="folder10Ma"></ref>
+				<ref bean="folder11Ma"></ref>
+				<ref bean="folder12Ma"></ref>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="followers">
+			<list>
+			</list>
+		</property>
+
+		<property name="following">
+			<list>
+			</list>
+		</property>
+
+		<property name="ingredients">
+			<list>
+				<ref bean="ingredient5" />
+				<ref bean="ingredient6" />
+				<ref bean="ingredient7" />
+				<ref bean="ingredient8" />
+				<ref bean="ingredient9" />
+			</list>
+		</property>
+
+		<property name="curriculum">
+			<ref bean="curriculum3Ma" />
+		</property>
+
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Cook -->
+
+	<bean id="Cook1" class="domain.Cook">
+		<property name="name" value="Jaimie" />
+		<property name="surname" value="Olliver" />
+		<property name="emailAddress" value="jaimieolliver@gmail.com" />
+		<property name="phoneNumber" value="+34 954 44 44 44" />
+		<property name="postalAddress" value="41020" />
+		<property name="managedMasterClasses">
+			<list>
+				<ref bean="MClass1" />
+				<ref bean="MClass3" />
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount1Cook"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder1Cook"></ref>
+				<ref bean="folder2Cook"></ref>
+				<ref bean="folder3Cook"></ref>
+				<ref bean="folder4Cook"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="Cook2" class="domain.Cook">
+		<property name="name" value="Ferrat" />
+		<property name="surname" value="Adria" />
+		<property name="emailAddress" value="ferratAd@gmail.com" />
+		<property name="phoneNumber" value="+34 956 56 56 56" />
+		<property name="postalAddress" value="28004" />
+		<property name="managedMasterClasses">
+			<list>
+				<ref bean="MClass2" />
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount2Cook"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder5Cook"></ref>
+				<ref bean="folder6Cook"></ref>
+				<ref bean="folder7Cook"></ref>
+				<ref bean="folder8Cook"></ref>
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="Cook3" class="domain.Cook">
+		<property name="name" value="Carlos" />
+		<property name="surname" value="Arguinano" />
+		<property name="emailAddress" value="arguinano@gmail.com" />
+		<property name="phoneNumber" value="+34 943 43 43 43" />
+		<property name="postalAddress" value="20008" />
+		<property name="managedMasterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+
+			</list>
+		</property>
+		<property name="userAccount">
+			<ref bean="userAccount3Cook"></ref>
+		</property>
+
+		<property name="folders">
+			<list>
+				<ref bean="folder9Cook"></ref>
+				<ref bean="folder10Cook"></ref>
+				<ref bean="folder11Cook"></ref>
+				<ref bean="folder12Cook"></ref>
+				<ref bean="folder13Cook"></ref>
+
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<!-- Fee -->
+
+	<bean id="fee" class="domain.Fee">
+		<property name="costPerBanner" value="0.25" />
+	</bean>
+
+
+	<!-- Learning Material -->
+
+	<bean id="TLMaterial1" class="domain.Video">
+		<property name="title" value="Cut onion" />
+		<property name="summary" value="Learn how to cut an onion perfectly" />
+		<property name="attachments">
+			<list>
+				<value>https://consigna.us.es/392684</value>
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass1" />
+			</list>
+		</property>
+		<property name="identifier" value="https://www.youtube.com/watch?v=3FUOZUiQrp4" />
+	</bean>
+
+	<bean id="TLMaterial2" class="domain.Video">
+		<property name="title" value="How to cut a tomato" />
+		<property name="summary" value="VLearn how to cut a tomato like a chef" />
+		<property name="attachments">
+			<list>
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass2" />
+			</list>
+		</property>
+		<property name="identifier" value="https://www.youtube.com/watch?v=I2UeVeMhyjY" />
+	</bean>
+
+	<bean id="TLMaterial3" class="domain.Text">
+		<property name="title" value="Veggie foods" />
+		<property name="summary" value="Kind of onions" />
+		<property name="attachments">
+			<list>
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass2" />
+			</list>
+		</property>
+		<property name="body"
+			value="&lt;p&gt;http://www.cocinillas.es/2014/06/tipos-de-cebolla-diferencias-usos-y-como-diferenciarlas/&lt;/p&gt;" />
+	</bean>
+
+	<bean id="TLMaterial4" class="domain.Presentation">
+		<property name="title" value="Ham" />
+		<property name="summary" value="A presentation about ham and how to cut it" />
+		<property name="attachments">
+			<list>
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass3" />
+			</list>
+		</property>
+		<property name="path"
+			value="http://es.slideshare.net/kkdelujo/como-cortar-jamon-jabugo?qid=9b04f8dd-2193-4396-969a-f4b438b74987" />
+	</bean>
+
+	<bean id="TLMaterial5" class="domain.Text">
+		<property name="title" value="Vegan cooking" />
+		<property name="summary" value="A text about vegan cooking nowadays." />
+		<property name="attachments">
+			<list>
+			</list>
+		</property>
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+		<property name="body" value="&lt;p&gt;Vegan Cooking.&lt;/p&gt;" />
+	</bean>
+	<!-- Administrator -->
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="userAccount" ref="userAccount1" />
+		<property name="name" value="Fernando" />
+		<property name="surname" value="Gutierrez" />
+		<property name="emailAddress" value="administrator1@emailAddress.com" />
+		<property name="phoneNumber" value="+34 655766889" />
+		<property name="postalAddress" value="41012" />
+
+		<property name="folders">
+			<list>
+				<ref bean="folder1ad"></ref>
+				<ref bean="folder2ad"></ref>
+				<ref bean="folder3ad"></ref>
+				<ref bean="folder4ad"></ref>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+				<ref bean="MClass3" />
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+
+		<property name="contests">
+			<list>
+				<ref bean="contest1" />
+				<ref bean="contest2" />
+				<ref bean="contest3" />
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category1" />
+				<ref bean="category2" />
+				<ref bean="category3" />
+				<ref bean="category4" />
+				<ref bean="category5" />
+				<ref bean="category6" />
+				<ref bean="category7" />
+				<ref bean="category8" />
+			</list>
+		</property>
+
+		<property name="cooks">
+
+			<list>
+				<ref bean="Cook1" />
+				<ref bean="Cook2" />
+				<ref bean="Cook3" />
+			</list>
+		</property>
+
+		<property name="promotedMasterClasses">
+			<list>
+				<ref bean="MClass1" />
+				<ref bean="MClass3" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="administrator2" class="domain.Administrator">
+		<property name="userAccount" ref="userAccount2Ad" />
+		<property name="name" value="Joaquin" />
+		<property name="surname" value="Moreno" />
+		<property name="emailAddress" value="administrator2@emailAddress.com" />
+		<property name="phoneNumber" value="+34 678541632" />
+		<property name="postalAddress" value="41011" />
+
+		<property name="folders">
+			<list>
+				<ref bean="folder5ad"></ref>
+				<ref bean="folder6ad"></ref>
+				<ref bean="folder7ad"></ref>
+				<ref bean="folder8ad"></ref>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+				<ref bean="contest2" />
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+				<ref bean="category7" />
+			</list>
+		</property>
+
+		<property name="cooks">
+
+			<list>
+			</list>
+		</property>
+
+		<property name="promotedMasterClasses">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="administrator3" class="domain.Administrator">
+		<property name="userAccount" ref="userAccount3Ad" />
+		<property name="name" value="Juan" />
+		<property name="surname" value="Moreno" />
+		<property name="emailAddress" value="administrator3@emailAddress.com" />
+		<property name="phoneNumber" value="+34 678587469" />
+		<property name="postalAddress" value="41011" />
+
+		<property name="folders">
+			<list>
+				<ref bean="folder9ad"></ref>
+				<ref bean="folder10ad"></ref>
+				<ref bean="folder11ad"></ref>
+				<ref bean="folder12ad"></ref>
+			</list>
+		</property>
+
+		<property name="masterClasses">
+			<list>
+			</list>
+		</property>
+
+		<property name="socialIdentities">
+			<list>
+			</list>
+		</property>
+
+		<property name="contests">
+			<list>
+			</list>
+		</property>
+
+		<property name="categories">
+			<list>
+			</list>
+		</property>
+
+		<property name="cooks">
+
+			<list>
+			</list>
+		</property>
+
+		<property name="promotedMasterClasses">
+			<list>
+			</list>
+		</property>
+
+
+	</bean>
+
+	<!-- Master Class -->
+
+	<bean id="MClass1" class="domain.MasterClass">
+		<property name="title" value="Easy onion" />
+		<property name="description"
+			value="Jamie Olliver will tach how to cut onions in different shapes." />
+		<property name="cook">
+			<ref bean="Cook1" />
+		</property>
+		<property name="promoted" value="true" />
+		<property name="learningMaterials">
+			<list>
+				<ref bean="TLMaterial1" />
+
+				<ref bean="TLMaterial3" />
+			</list>
+		</property>
+
+
+		<property name="actors">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="MClass2" class="domain.MasterClass">
+		<property name="title" value="Tomatoes and how to cook them" />
+		<property name="description"
+			value="Ferrat Adria will teacha about tomatoes and vegan foods." />
+		<property name="promoted" value="false" />
+		<property name="cook">
+			<ref bean="Cook2" />
+		</property>
+		<property name="learningMaterials">
+			<list>
+				<ref bean="TLMaterial2" />
+			</list>
+		</property>
+		<property name="actors">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="MClass3" class="domain.MasterClass">
+		<property name="title" value="Let's learn how to cut ham!" />
+		<property name="description"
+			value="The best ham cutter in the world will teach it." />
+		<property name="promoted" value="false" />
+		<property name="cook">
+			<ref bean="Cook1" />
+		</property>
+		<property name="learningMaterials">
+			<list>
+				<ref bean="TLMaterial4" />
+			</list>
+		</property>
+		<property name="actors">
+			<list>
+				<ref bean="user1" />
+				<ref bean="nutritionist1Ma" />
+				<ref bean="administrator1" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Folders -->
+	<bean id="folder1ad" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder2ad" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder3ad" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1">
+		</property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder4ad" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder5ad" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder6ad" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder7ad" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator2">
+		</property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder8ad" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder9ad" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder10ad" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder11ad" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator3">
+		</property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder12ad" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="administrator3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="folder1" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user1" />
+
+		<property name="messages">
+			<list>
+				<ref bean="message2" />
+				<ref bean="message1Mb" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder2" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user1" />
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder3" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user1" />
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder4" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user1" />
+		<property name="messages">
+			<list>
+				<ref bean="message5" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder5" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user2"></property>
+		<property name="messages">
+			<list>
+				
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder6" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user2"></property>
+		<property name="messages">
+			<list>
+				<ref bean="message1" />
+				<ref bean="message4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder7" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user2"></property>
+		<property name="messages">
+			<list>
+				<ref bean="message2Mb" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder8" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="folder9" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor01"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder10" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor01"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder11" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor01"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder12" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor01"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder13" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor02"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder14" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor02"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder15" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor02"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder16" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor02"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder17" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor03"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder18" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor03"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder19" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor03"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder20" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor03"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="folder21" class="domain.Folder">
+		<property name="name" value="messages from administrators" />
+		<property name="systemFolder" value="false" />
+		<property name="actor" ref="Sponsor03"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder22" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor04"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder23" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor04"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder24" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor04"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder25" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor04"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder26" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder27" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder28" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder29" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="user3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder30" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor05"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder31" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor05"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder32" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor05"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder33" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Sponsor05"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="folder1Ma" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist1Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder2Ma" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist1Ma"></property>
+		<property name="messages">
+			<list>
+				<ref bean="message1Ma" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder3Ma" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist1Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder4Ma" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist1Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder5Ma" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist2Ma"></property>
+		<property name="messages">
+			<list>
+				
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder6Ma" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist2Ma"></property>
+		<property name="messages">
+			<list>
+				<ref bean="message2Ma" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder7Ma" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist2Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder8Ma" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist2Ma"></property>
+		<property name="messages">
+			<list>
+				
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder9Ma" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist3Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder10Ma" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist3Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder11Ma" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist3Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder12Ma" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="nutritionist3Ma"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="folder1Cook" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder2Cook" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder3Cook" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder4Cook" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook1"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder5Cook" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder6Cook" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder7Cook" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder8Cook" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook2"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder9Cook" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder10Cook" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder11Cook" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder12Cook" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="systemFolder" value="true" />
+		<property name="actor" ref="Cook3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<bean id="folder13Cook" class="domain.Folder">
+		<property name="name" value="favourites" />
+		<property name="systemFolder" value="false" />
+		<property name="actor" ref="Cook3"></property>
+		<property name="messages">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<!-- Messages -->
+
+	<bean id="message1" class="domain.Message">
+		<property name="sender" value="user2@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Sobre su receta"></property>
+		<property name="body" value="Me encanta!"></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+		<property name="folder">
+
+			<ref bean="folder6" />
+
+		</property>
+
+
+
+	</bean>
+	
+	<bean id="message2" class="domain.Message">
+		<property name="sender" value="user2@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Sobre su receta"></property>
+		<property name="body" value="Me encanta!"></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+
+		<property name="folder">
+
+			<ref bean="folder1" />
+
+		</property>
+
+
+
+
+	</bean>
+
+	<bean id="message1Ma" class="domain.Message">
+		<property name="sender" value="nutritionist1Ma@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Change your recipe"></property>
+		<property name="body" value="You should reduce the calory content."></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+
+		<property name="folder">
+			<ref bean="folder2Ma" />
+		</property>
+
+	</bean>
+	
+	<bean id="message1Mb" class="domain.Message">
+		<property name="sender" value="nutritionist1Ma@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Change your recipe"></property>
+		<property name="body" value="You should reduce the calory content."></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+		<property name="folder">
+			<ref bean="folder1" />
+		</property>
+
+
+	</bean>
+
+	<bean id="message2Ma" class="domain.Message">
+		<property name="sender" value="nutritionist2Ma@emailAddress.com"></property>
+		<property name="recipient" value="user2@emailAddress.com"></property>
+		<property name="moment" value="09/02/2016 15:45"></property>
+		<property name="subject" value="Your recipe is really healthy."></property>
+		<property name="body" value="I love the ingredients. It's healthy."></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="LOW">
+		</property>
+
+		
+
+		<property name="folder">
+			<ref bean="folder6Ma" />
+		</property>
+
+	</bean>
+	
+	<bean id="message2Mb" class="domain.Message">
+		<property name="sender" value="nutritionist2Ma@emailAddress.com"></property>
+		<property name="recipient" value="user2@emailAddress.com"></property>
+		<property name="moment" value="09/02/2016 15:45"></property>
+		<property name="subject" value="Your recipe is really healthy."></property>
+		<property name="body" value="I love the ingredients. It's healthy."></property>
+		<property name="spam" value="false"></property>
+
+		<property name="priority" value="LOW">
+		</property>
+
+		<property name="folder">
+			<ref bean="folder7" />
+		</property>
+
+		
+	</bean>
+	
+	<bean id="message4" class="domain.Message">
+		<property name="sender" value="user2@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Good morning"></property>
+		<property name="body" value="Is this recipe like a viagra?"></property>
+		<property name="spam" value="true"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+
+		
+
+		<property name="folder">
+			<ref bean="folder6" />
+		</property>
+	</bean>
+	
+	<bean id="message5" class="domain.Message">
+		<property name="sender" value="user2@emailAddress.com"></property>
+		<property name="recipient" value="user1@emailAddress.com"></property>
+		<property name="moment" value="01/02/2016 15:45"></property>
+		<property name="subject" value="Good morning"></property>
+		<property name="body" value="Is this recipe like a viagra?"></property>
+		<property name="spam" value="true"></property>
+
+		<property name="priority" value="HIGH">
+		</property>
+
+
+		<property name="folder">
+
+			<ref bean="folder4" />
+
+		</property>
+	</bean>
+
+	<!-- Social Identities -->
+
+	<bean id="socialIdentity1" class="domain.SocialIdentity">
+		<property name="nick" value="user1"></property>
+		<property name="nameOfSocialNetwork" value="Twitter"></property>
+		<property name="link" value="http://www.twitter.com/user1"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="user1" />
+	</bean>
+
+	<bean id="socialIdentity2" class="domain.SocialIdentity">
+		<property name="nick" value="user1"></property>
+		<property name="nameOfSocialNetwork" value="Facebook"></property>
+		<property name="link" value="http://www.facebook.com/user1"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="user1" />
+	</bean>
+	<bean id="socialIdentity3" class="domain.SocialIdentity">
+		<property name="nick" value="user2"></property>
+		<property name="nameOfSocialNetwork" value="Twitter"></property>
+		<property name="link" value="http://www.twitter.com/user2"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="user2" />
+	</bean>
+
+	<bean id="socialIdentity4" class="domain.SocialIdentity">
+		<property name="nick" value="user2"></property>
+		<property name="nameOfSocialNetwork" value="Facebook"></property>
+		<property name="link" value="http://www.facebook.com/user2"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="user2" />
+	</bean>
+
+	<bean id="socialIdentity1Ma" class="domain.SocialIdentity">
+		<property name="nick" value="nutritionist1Ma"></property>
+		<property name="nameOfSocialNetwork" value="Twitter"></property>
+		<property name="link" value="http://www.twitter.com/nutritionist1Ma"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="nutritionist1Ma" />
+	</bean>
+
+	<bean id="socialIdentity2Ma" class="domain.SocialIdentity">
+		<property name="nick" value="nutritionist2Ma"></property>
+		<property name="nameOfSocialNetwork" value="Facebook"></property>
+		<property name="link" value="http://www.facebook.com/nutritionist2Ma"></property>
+		<property name="picture" value=""></property>
+		<property name="actor" ref="nutritionist2Ma" />
+	</bean>
+
+	<!-- Spam -->
+
+	<bean id="Spam" class="domain.Spam">
+		<property name="spamWords" value="viagra,cialis,sex,love" />
+	</bean>
+
+
+
+</beans>

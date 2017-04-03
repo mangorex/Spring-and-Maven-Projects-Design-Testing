@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- * tiles_es.xml * * Copyright (C) 2014 Universidad de Sevilla * * The 
+	use of this project is hereby constrained to the conditions of the * TDG 
+	Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="bill/sponsor/browse" extends="master.page">
+		<put-attribute name="title" value="Ojear facturas" />
+		<put-attribute name="body" value="/views/bill/browse.jsp" />
+	</definition>
+
+	<definition name="bill/sponsor/edit" extends="master.page">
+		<put-attribute name="title" value="Editar facturas" />
+		<put-attribute name="body" value="/views/bill/edit.jsp" />
+	</definition>
+
+	<definition name="bill/compute" extends="master.page">
+		<put-attribute name="title" value="Computar factura mensual" />
+		<put-attribute name="body" value="/views/bill/compute.jsp" />
+	</definition>
+</tiles-definitions>
