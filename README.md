@@ -6,5 +6,5 @@ The components of the Team are:
 * Manuel Antonio Gómez Angulo
 * Alejandro Chaves Medina
 * Francisco José Domínguez Mena
-* Jesús Luna Monchul
+* Jesús Fernando Luna Monchul
 * Na Chen
